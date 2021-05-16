@@ -1,0 +1,87 @@
+{
+    "avatar": {
+        "type": "Image",
+        "description": "Get user's avatar with PNG, JPG, WEBP or GIF format.",
+        "argument": "avatar [@user]"
+    },
+    "baka": {
+        "type": "Fun",
+        "description": "Say someone baka or me? :D?",
+        "argument": "baka [@user]"
+    },
+    "ban": {
+        "type": "Moderation",
+        "description": "Ban someone from your server.",
+        "argument": "ban [@user]"
+    },
+    "bb": {
+        "type": "Image",
+        "description": "Get an image about big boobs girls",
+        "argument": "bb"
+    },
+    "cuddle": {
+        "type": "Fun",
+        "description": "Cuddle someone or cuddle me",
+        "argument": "cuddle [@user]"
+    },
+    "credit": {
+        "type": "Utility",
+        "description": "Bot credit",
+        "argument": "credit"
+    },
+    "help": {
+        "type": "Utility",
+        "description": "Bot's commands list",
+        "argument": "help [command]"
+    },
+    "hug": {
+        "type": "Fun",
+        "description": "Hug someone or hug me",
+        "argument": "hug [@user]"
+    },
+    "kiss": {
+        "type": "Fun",
+        "description": "Kiss someone or kiss me",
+        "argument": "kiss [@user]"
+    },
+    "loli": {
+        "type": "Image",
+        "description": "Get an image about Lolis (young little girl)",
+        "argument": "loli"
+    },
+    "needhug": {
+        "type": "Fun",
+        "description": "Asking for hug",
+        "argument": "needhug"
+    },
+    "neko": {
+        "type": "Image",
+        "description": "Get an image about Nekos or cat girls",
+        "argument": "neko"
+    },
+    "pat": {
+        "type": "Fun",
+        "description": "Pat someone or pat me",
+        "argument": "pat [@user]"
+    },
+    "ping": {
+        "type": "Utility",
+        "description": "Check bot latency.",
+        "argument": "ping"
+    },
+    "shota": {
+        "type": "Image",
+        "description": "Get an image about Shotas (young little boys)",
+        "argument": "shota"
+    },
+    "slap": {
+        "type": "Fun",
+        "description": "Slap someone or... slap me?",
+        "argument": "slap [@user]"
+    },
+    "status": {
+        "type": "Utility",
+        "description": "Check bot status",
+        "argument": "status"
+    }
+}

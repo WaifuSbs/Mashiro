@@ -1,0 +1,11 @@
+{
+    "token": "NzIwNjU3MzgxMTEzMjAwNjgz.XuJKfA.T-EU-0XKy8bpF8hVejm5Ww1tcuc",
+    "prefix": "m!",
+    "bot_name": "Testing bot",
+    "bot_logo": "https://cdn.discordapp.com/icons/806455241619800084/2ecdd89fb641ce6c05571715a0f1a1de.png",
+    "main_color": "#eab8c4",
+
+    "performance": {
+        "shard_count": 0
+    }
+}
