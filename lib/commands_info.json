@@ -39,6 +39,11 @@
         "description": "Hug someone or hug me",
         "argument": "hug [@user]"
     },
+    "info": {
+        "type": "Utility",
+        "description": "Bot information",
+        "argument": "info"
+    },
     "kiss": {
         "type": "Fun",
         "description": "Kiss someone or kiss me",
@@ -82,6 +87,6 @@
     "status": {
         "type": "Utility",
         "description": "Check bot status",
-        "argument": "status"
+        "argument": "status [shard ID]"
     }
 }

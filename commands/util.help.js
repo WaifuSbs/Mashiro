@@ -24,7 +24,6 @@ module.exports.run = async (client, message, args) => {
         embed.addField(':video_game: Game API `' + prefix + 'help game`', 'Stats checker for games like Minecraft, Hypixel (Minecraft), osu! (Official)');
         embed.addField(':hammer_pick: Moderation `' + prefix + 'help moderation`', 'The power of BAN HAMMER never makes me disappointed.');
         embed.addField(':gear: Ultility `' + prefix + 'help ultility`', 'Ultility commands');
-        embed.setTimestamp();
         embed.setFooter(`${config.bot_name} >> Help`, config.bot_logo);
         message.channel.send(embed);
     } else {
@@ -37,7 +36,6 @@ module.exports.run = async (client, message, args) => {
                     embed.addField(`${cmd.config.name}`+' `'+prefix+cmd.config.argument+'`',`**>** ${cmd.config.description}\n**>** Aliases: ${aliases}`, true);
                 }
             });
-            embed.setTimestamp();
             embed.setFooter(`${config.bot_name} >> Help >> Fun`, config.bot_logo);
             message.channel.send(embed);
         } else if (argument == "image") {
@@ -49,7 +47,6 @@ module.exports.run = async (client, message, args) => {
                     embed.addField(`${cmd.config.name}`+' `'+prefix+cmd.config.argument+'`',`**>** ${cmd.config.description}\n**>** Aliases: ${aliases}`, true);
                 }
             });
-            embed.setTimestamp();
             embed.setFooter(`${config.bot_name} >> Help >> Image`, config.bot_logo);
             message.channel.send(embed);
         } else if (argument == "game") {
@@ -61,7 +58,6 @@ module.exports.run = async (client, message, args) => {
                     embed.addField(`${cmd.config.name}`+' `'+prefix+cmd.config.argument+'`',`**>** ${cmd.config.description}\n**>** Aliases: ${aliases}`, true);
                 }
             });
-            embed.setTimestamp();
             embed.setFooter(`${config.bot_name} >> Help >> Game API`, config.bot_logo);
             message.channel.send(embed);
         } else if (argument == "moderation") {
@@ -73,7 +69,6 @@ module.exports.run = async (client, message, args) => {
                     embed.addField(`${cmd.config.name}`+' `'+prefix+cmd.config.argument+'`',`**>** ${cmd.config.description}\n**>** Aliases: ${aliases}`, true);
                 }
             });
-            embed.setTimestamp();
             embed.setFooter(`${config.bot_name} >> Help >> Moderation`, config.bot_logo);
             message.channel.send(embed);
         } else if (argument == "ultility") {
@@ -85,7 +80,6 @@ module.exports.run = async (client, message, args) => {
                     embed.addField(`${cmd.config.name}`+' `'+prefix+cmd.config.argument+'`',`**>** ${cmd.config.description}\n**>** Aliases: ${aliases}`, true);
                 }
             });
-            embed.setTimestamp();
             embed.setFooter(`${config.bot_name} >> Help >> Ultility`, config.bot_logo);
             message.channel.send(embed);
         } else {
@@ -96,7 +90,6 @@ module.exports.run = async (client, message, args) => {
                     embed.setDescription('**>>** Help for command: '+'`'+cmd.config.name+'`');
                     if (cmd.config.aliases.length == 0) { aliases = `*none*`} else { aliases = '`'+cmd.config.aliases+'`'}
                     embed.addField(`${cmd.config.name}`+' `'+prefix+cmd.config.argument+'`',`**>** ${cmd.config.description}\n**>** Aliases: ${aliases}`, true);
-                    embed.setTimestamp();
                     embed.setFooter(`${config.bot_name} >> Help >> ${cmd.config.type}`, config.bot_logo);
                     message.channel.send(embed);
                     loop_break = "break";
@@ -110,7 +103,6 @@ module.exports.run = async (client, message, args) => {
                         embed.setDescription(`**>>** Help for command: ${argument.toLowerCase()}`);
                         if (cmd.config.aliases.length == 0) { aliases = `*none*`} else { aliases = '`'+cmd.config.aliases+'`'}
                         embed.addField(`${cmd.config.name}`+' `'+prefix+cmd.config.argument+'`',`**>** ${cmd.config.description}\n**>** Aliases: ${aliases}`, true);
-                        embed.setTimestamp();
                         embed.setFooter(`${config.bot_name} >> Help >> ${cmd.config.type}`, config.bot_logo);
                         message.channel.send(embed);
                         loop_break_alias = "break";
@@ -118,7 +110,6 @@ module.exports.run = async (client, message, args) => {
                 });
                 if (loop_break_alias != "break") {
                     embed.setDescription(':x: Unable to find this command: '+'`'+args[0]+'`');
-                    embed.setTimestamp();
                     embed.setFooter(`${config.bot_name} >> Help`, config.bot_logo);
                     message.channel.send(embed);
                 }

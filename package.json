@@ -1,7 +1,7 @@
 {
-  "name": "wholesome-squad",
+  "name": "mashiro",
   "version": "1.0.0",
-  "description": "Wholesome Squad Discord.js bot",
+  "description": "A powerful bot for anime lovers.",
   "main": "bot.js",
   "scripts": {
     "start": "node shard.js",

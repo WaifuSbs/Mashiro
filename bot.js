@@ -18,7 +18,7 @@ fs.readdir("./commands/", (err, files) => {
 
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if (jsfile.length <= 0) {
-    return console.log("[!] [COMMAND] Couldn't load commands since there is no commands files to load!");
+    return console.log("[!] => Couldn't load commands since there is no commands files to load!");
   }
 
   jsfile.forEach((f, i) => {
@@ -54,8 +54,23 @@ fs.readdir('./events/', (err, files) => {
 });
 
 client.on('ready', async () => {
-  client.user.setActivity("Test Bot", { type: "PLAYING" });
+  // Bot Status
+  if (config.status.type == "STREAMING") {
+    if (config.status.url == "") { console.log("=> WARN: Please set the url for Streaming status in config file!"); }
+    else { client.user.setActivity(config.status.name, { type: "STREAMING" , url: config.status.url}); }
+  } else {
+    client.user.setActivity(config.status.name, { type: config.status.type});
+  }
   console.log(`=> Client: Connected to Discord API (${client.user.tag})!`);
+  // This function tests whether the bot is run with "node shard" or not.
+  try {
+    let values = await client.shard.broadcastEval(`[this.shard.id]`);
+  } catch (err) {
+    console.log(`[ERROR] Please run the bot with "node shard" instead! Destroying client...`)
+    client.destroy();
+    process.exit();
+  }
+  
 });
 
 client.on('message', async message => {
@@ -69,8 +84,9 @@ client.on('message', async message => {
     let command = client.commands.get(cmd.slice(prefix.length)) || client.commands.get(client.aliases.get(cmd.slice(prefix.length)));
 
     if (command) command.run(client, message, args);
-    if (!command) {
-      message.channel.send("hi")
+    if (!command && message.content == prefix) {
+      let info = require("./commands/util.info");
+      info.run(client, message, args);
     }
   }
 
