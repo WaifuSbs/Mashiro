@@ -13,11 +13,10 @@ const package = require("../package.json");
 const prefix = config.prefix;
 
 module.exports.run = async (client, message, args) => {
-    const kaomoji = require("../lib/kaomoji.json");
-    var i = Math.floor(Math.random() * kaomoji.kaomoji.length);
-
+    const kaomoji = require("../lib/kaomoji.js");
+    var kaomoji_name = await kaomoji.getKaomoji();
     const embed = new Discord.MessageEmbed()
-    .setAuthor(kaomoji.kaomoji[i], client.user.displayAvatarURL(), 'https://mashiro.weebs.life')
+    .setAuthor(kaomoji_name, client.user.displayAvatarURL(), 'https://mashiro.weebs.life')
     .setTitle("Mashiro Discord Bot")
     .setColor(config.main_color)
     .setDescription(`<a:bumping_heart:827923724904169483> **A powerful discord bot for anime lovers.**\n

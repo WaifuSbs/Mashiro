@@ -1,4 +1,9 @@
 {
+    "akinator": {
+        "type": "Fun",
+        "description": "Akinator: Think about something. I will try to guess what or who it is.",
+        "argument": "akinator [theme]"
+    },
     "avatar": {
         "type": "Image",
         "description": "Get user's avatar with PNG, JPG, WEBP or GIF format.",
